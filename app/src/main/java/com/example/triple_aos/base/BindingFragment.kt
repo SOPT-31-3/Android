@@ -1,4 +1,4 @@
-package org.sopt.sample.base
+package com.example.triple_aos.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
