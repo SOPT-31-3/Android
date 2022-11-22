@@ -18,4 +18,11 @@
         <item name="textAppearanceHeadline1">@font/notosans_bold</item>
         <item name="textAppearanceBody1">@font/notosans_medium</item>
     </style>
+
+    <style name="TitleAppearance_1">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">@color/title_1</item>
+        <item name="fontFamily">@font/notosans_bold</item>
+    </style>
 </resources>

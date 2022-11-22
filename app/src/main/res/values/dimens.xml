@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_height">175dp</dimen>
+    <dimen name="title_back_margin_start">30dp</dimen>
+    <dimen name="title_back_margin_top">53dp</dimen>
+    <dimen name="title_title_margin_start">28dp</dimen>
+    <dimen name="title_title_margin_top">85dp</dimen>
+</resources>
