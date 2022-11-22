@@ -31,4 +31,24 @@
     <string name="default_plan">내용을 입력하세요.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--home-->
+    <string name="home_triple">TRIPLE</string>
+    <string name="home_title_description">다시 열린 해외여행,\n도쿄에서 워밍업!</string>
+    <string name="home_chip_airline_ticket">항공권</string>
+    <string name="home_chip_lodging">숙소</string>
+    <string name="home_chip_tour_ticket">투어 티켓</string>
+    <string name="home_chip_foreign_package">해외 페키지</string>
+    <string name="home_chip_travle_magagine">여행 메거진</string>
+    <string name="home_chip_travle_osaka">오사카 여행</string>
+    <string name="home_chip_travel_japane">일본 특가</string>
+    <string name="home_chip_rental_car">혜택 렌터카</string>
+    <string name="home_chip_pecial_air_ticket">특가 항공권</string>
+    <string name="home_chip_travle_jeju">제주 여행</string>
+    <string name="home_title_real_time_popular">실시간 인기 여행지</string>
+    <string name="home_show_whole">전체 보기</string>
+    <string name="home_title_show_recent">최근 본 상품</string>
+    <string name="home_description_vali">아야나 짐바란 리조트 앤 스파, 발리</string>
+    <string name="home_description_ubot">코마네카 앳 라사 사양 - 스 서티피드</string>
+
+
 </resources>
