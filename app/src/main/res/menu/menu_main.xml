@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_search"
-        android:icon="@drawable/"
-        android:title="찾기"
-        />
-    <item
         android:id="@+id/menu_home"
         android:icon="@drawable/ic_home"
-        android:title="홈"
+        android:title="@string/main_menu_home"
         />
     <item
-        android:id="@+id/menu_setting"
-        android:icon="@drawable/ic_settings"
-        android:title="설정"
+        android:id="@+id/menu_wish"
+        android:icon="@drawable/ic_heart"
+        android:title="@string/main_menu_wish"
+        />
+    <item
+        android:id="@+id/menu_create_travle"
+        android:icon="@drawable/ic_create_travle"
+        android:title="@string/main_menu_travel"
+        />
+    <item
+        android:id="@+id/menu_my_travel"
+        android:icon="@drawable/ic_mytrip"
+        android:title="@string/main_menu_my_travel"
+        />
+    <item
+        android:id="@+id/menu_mypage"
+        android:icon="@drawable/ic_my"
+        android:title="@string/main_menu_mypage"
         />
 </menu>
