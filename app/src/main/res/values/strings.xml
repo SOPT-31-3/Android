@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Triple-AOS</string>
+    <!--main-->
+    <string name="main_menu_home">홈</string>
+    <string name="main_menu_wish">위시리스트</string>
+    <string name="main_menu_travel">여행생성</string>
+    <string name="main_menu_my_travel">내 여행</string>
+    <string name="main_menu_mypage">마이</string>
 </resources>
