@@ -5,13 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.triple_aos.databinding.LayoutAddPlanBinding
 
-class NewPlanAdapter : RecyclerView.Adapter<NewPlanAdapter.NewPlanViewHolder>() {
+class FirstPlanAdapter : RecyclerView.Adapter<FirstPlanAdapter.NewPlanViewHolder>() {
     private var entire_plans: List<String>? = emptyList()
 
     class NewPlanViewHolder(
         private val binding: LayoutAddPlanBinding
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind() {
+        fun bind(plan : String) {
 
         }
     }
@@ -19,7 +19,7 @@ class NewPlanAdapter : RecyclerView.Adapter<NewPlanAdapter.NewPlanViewHolder>() 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewPlanViewHolder {
         val binding =
             LayoutAddPlanBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return NewPlanAdapter.NewPlanViewHolder(binding)
+        return FirstPlanAdapter.NewPlanViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: NewPlanViewHolder, position: Int) {
@@ -28,5 +28,5 @@ class NewPlanAdapter : RecyclerView.Adapter<NewPlanAdapter.NewPlanViewHolder>() 
         }
     }
 
-    override fun getItemCount(): Int = entire_plans?.size ? :0
+    override fun getItemCount(): Int = entire_plans?.size ?: 0
 }

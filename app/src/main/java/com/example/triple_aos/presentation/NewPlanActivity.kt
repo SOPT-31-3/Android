@@ -37,7 +37,6 @@ class NewPlanActivity : BindingActivity<ActivityNewPlanBinding>(R.layout.activit
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initFragment()
-        initListener()
     }
 
     private fun initFragment() {
@@ -50,7 +49,4 @@ class NewPlanActivity : BindingActivity<ActivityNewPlanBinding>(R.layout.activit
         })
     }
 
-    private fun initListener() {
-
-    }
 }
