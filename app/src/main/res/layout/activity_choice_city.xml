@@ -57,7 +57,6 @@
             tools:listitem="@layout/city_item"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="3"
-            android:background="@color/white"
             android:overScrollMode="never"
             android:clipToPadding="false"/>
     </androidx.constraintlayout.widget.ConstraintLayout>

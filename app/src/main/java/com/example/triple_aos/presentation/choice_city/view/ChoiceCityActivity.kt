@@ -44,12 +44,13 @@ class ChoiceCityActivity :
         binding.vm = viewModel
         binding.lifecycleOwner = this
 
-        binding.choiceGridRv.layoutManager = GridLayoutManager(this, 3)
-        binding.choiceGridRv.addItemDecoration(ItemOffsetDecoration(this,8))
+
         initAdapter()
     }
 
     private fun initAdapter() {
+        binding.choiceGridRv.layoutManager = GridLayoutManager(this, 3)
+        binding.choiceGridRv.addItemDecoration(ItemOffsetDecoration(this,8))
         binding.choiceGridRv.adapter = adapter
     }
 }
