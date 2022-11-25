@@ -3,16 +3,22 @@ package com.example.triple_aos.presentation
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.triple_aos.data.NewPlanData
 import com.example.triple_aos.databinding.LayoutAddPlanBinding
 
 class FirstPlanAdapter : RecyclerView.Adapter<FirstPlanAdapter.NewPlanViewHolder>() {
-    private var entire_plans: List<String>? = emptyList()
+    private var entire_plans: List<NewPlanData>? = emptyList()
+    fun setItems(items: List<NewPlanData>) {
+        this.entire_plans = items
+        notifyDataSetChanged()
+    }
 
     class NewPlanViewHolder(
         private val binding: LayoutAddPlanBinding
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(plan : String) {
-
+        fun bind(plan: NewPlanData) {
+            binding.etPlanTime.hint = "00:00"
+            binding.etPlanContent.hint = "내용을 입력하세요."
         }
     }
 
