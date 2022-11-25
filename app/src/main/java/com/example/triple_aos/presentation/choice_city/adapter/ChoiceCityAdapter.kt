@@ -14,6 +14,7 @@ import com.example.triple_aos.util.DiffUtilItemCallback
 class ChoiceCityAdapter(private val context: Context) :
     ListAdapter<ChoiceCityData, ChoiceViewHolder>(DiffUtilItemCallback()) {
     private val inflater by lazy { LayoutInflater.from(context) }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChoiceViewHolder {
         return when (viewType) {
             CITY_INFO_TYPE -> CityInfoViewHolder(
@@ -37,10 +38,7 @@ class ChoiceCityAdapter(private val context: Context) :
     }
 
     override fun onBindViewHolder(holder: ChoiceViewHolder, position: Int) {
-        when (holder) {
-            is CityInfoViewHolder -> holder.onBind(currentList[position])
-            is CityAddViewHolder -> holder.onBind(currentList[position])
-        }
+        holder.onBind(currentList[position])
     }
 
     override fun getItemViewType(position: Int): Int {
