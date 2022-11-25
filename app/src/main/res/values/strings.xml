@@ -10,4 +10,25 @@
     <string name="main_menu_my_travel">내 여행</string>
     <string name="main_menu_mypage">마이</string>
 
+
+    <string name="tab_intro">파리 여행,\n언제 떠나세요?</string>
+    <string name="tab_plan">전체일정</string>
+    <string name="tab_flight">항공</string>
+    <string name="tab_accommodation">숙소</string>
+    <string name="tab_food">맛집</string>
+    <string name="tab_tour">투어·티켓</string>
+    <string name="add_plan">일정을 등록하세요.</string>
+
+    <string name="first_plan">1일차</string>
+    <string name="second_plan">2일차</string>
+    <string name="third_plan">3일차</string>
+    <string name="first_date">02.04(토)</string>
+    <string name="second_date">02.05(일)</string>
+    <string name="third_date">02.06(월)</string>
+    <string name="save_plan">전체 저장</string>
+
+    <string name="default_time">00:00</string>
+    <string name="default_plan">내용을 입력하세요.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
