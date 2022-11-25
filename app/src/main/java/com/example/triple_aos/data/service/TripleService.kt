@@ -1,9 +1,7 @@
 package com.example.triple_aos.data.service
 
-import com.example.triple_aos.BuildConfig.BASE_URL
 import com.example.triple_aos.data.dto.NewPlanData
 import retrofit2.Call
-import retrofit2.Retrofit
 import retrofit2.http.Body
 import retrofit2.http.POST
 
@@ -11,7 +9,7 @@ interface TripleService {
 
     @POST("/trip/plan/allPlan")
     fun saveAllPlan(
-        @Body request:NewPlanData
+        @Body request: NewPlanData
     ): Call<NewPlanData>
 
 }

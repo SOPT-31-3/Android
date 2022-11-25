@@ -39,15 +39,12 @@ class HomeFragment : Fragment() {
 
         val snap = PagerSnapHelper()
         snap.attachToRecyclerView(binding.rvNation)
-        binding.rvNation.apply {
-            adapter = nationAdapter
-        }
-        binding.rvRecentPopular.apply {
-            adapter = nationPopularAdapter
-        }
-        binding.rvRecentShoe.apply {
-            adapter = nationRecentAdapter
-        }
+        binding.rvNation.adapter = nationAdapter
+
+        binding.rvRecentPopular.adapter = nationPopularAdapter
+
+        binding.rvRecentShoe.adapter = nationRecentAdapter
+
         binding.rvMagagine.adapter = nationMagagineAdapter
 
         nationAdapter.setNationList(viewModel.mockNationList)
