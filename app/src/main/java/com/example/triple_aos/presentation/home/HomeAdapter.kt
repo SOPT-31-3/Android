@@ -1,4 +1,4 @@
-package com.example.triple_aos.home
+package com.example.triple_aos.presentation.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

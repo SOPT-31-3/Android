@@ -1,4 +1,4 @@
-package com.example.triple_aos.home
+package com.example.triple_aos.presentation.home
 
 import androidx.lifecycle.ViewModel
 import com.example.triple_aos.R

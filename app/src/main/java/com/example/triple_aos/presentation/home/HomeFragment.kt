@@ -1,4 +1,4 @@
-package com.example.triple_aos.home
+package com.example.triple_aos.presentation.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,8 +13,13 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding: FragmentHomeBinding
         get() = requireNotNull(_binding) { "error 발생" }
+
     private lateinit var nationAdapter: HomeAdapter
+    private lateinit var nationPopularAdapter: HomePopularAdapter
+    private lateinit var nationRecentAdapter: HomeRecentAdapter
+    private lateinit var nationMagagineAdapter: HomeMagagineAdapter
     private val viewModel by viewModels<HomeViewModel>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,27 +33,32 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         nationAdapter = HomeAdapter()
+        nationPopularAdapter = HomePopularAdapter()
+        nationRecentAdapter = HomeRecentAdapter()
+        nationMagagineAdapter = HomeMagagineAdapter()
+
         val snap = PagerSnapHelper()
         snap.attachToRecyclerView(binding.rvNation)
         binding.rvNation.apply {
             adapter = nationAdapter
         }
+        binding.rvRecentPopular.apply {
+            adapter = nationPopularAdapter
+        }
+        binding.rvRecentShoe.apply {
+            adapter = nationRecentAdapter
+        }
+        binding.rvMagagine.adapter = nationMagagineAdapter
+
         nationAdapter.setNationList(viewModel.mockNationList)
+        nationPopularAdapter.setNationList(viewModel.mockNationList)
+        nationRecentAdapter.setNationList(viewModel.mockNationList)
+        nationMagagineAdapter.setNationList(viewModel.mockNationList)
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
-    /*
-    val snap = PagerSnapHelper()
-        snap.attachToRecyclerView(recycler)
-
-        recycler.apply {
-            layoutManager = listManager
-            adapter = listAdapter
-        }
-     */
 
 }
