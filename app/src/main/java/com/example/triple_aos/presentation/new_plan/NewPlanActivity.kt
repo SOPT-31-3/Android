@@ -1,4 +1,4 @@
-package com.example.triple_aos.presentation
+package com.example.triple_aos.presentation.new_plan
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,13 +1,14 @@
-package com.example.triple_aos.presentation
+package com.example.triple_aos.presentation.new_plan
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.triple_aos.data.NewPlanData
+import com.example.triple_aos.data.dto.NewPlanData
 import com.example.triple_aos.databinding.LayoutAddPlanBinding
 
-class SecondPlanAdapter : RecyclerView.Adapter<SecondPlanAdapter.NewPlanViewHolder>() {
+class ThirdPlanAdapter : RecyclerView.Adapter<ThirdPlanAdapter.NewPlanViewHolder>() {
     private var entire_plans: List<NewPlanData>? = emptyList()
+
     fun setItems(items: List<NewPlanData>) {
         this.entire_plans = items
         notifyDataSetChanged()
@@ -25,13 +26,13 @@ class SecondPlanAdapter : RecyclerView.Adapter<SecondPlanAdapter.NewPlanViewHold
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): SecondPlanAdapter.NewPlanViewHolder {
+    ): NewPlanViewHolder {
         val binding =
             LayoutAddPlanBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return SecondPlanAdapter.NewPlanViewHolder(binding)
+        return NewPlanViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: SecondPlanAdapter.NewPlanViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: NewPlanViewHolder, position: Int) {
         entire_plans?.let {
             holder.bind(it[position])
         }

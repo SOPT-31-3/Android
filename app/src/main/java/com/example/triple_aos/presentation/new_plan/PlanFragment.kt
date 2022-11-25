@@ -1,10 +1,10 @@
-package com.example.triple_aos.presentation
+package com.example.triple_aos.presentation.new_plan
 
 import android.os.Bundle
 import android.view.View
 import com.example.triple_aos.R
 import com.example.triple_aos.base.BindingFragment
-import com.example.triple_aos.data.NewPlanData
+import com.example.triple_aos.data.dto.NewPlanData
 import com.example.triple_aos.databinding.FragmentPlanBinding
 
 class PlanFragment : BindingFragment<FragmentPlanBinding>(R.layout.fragment_plan) {
