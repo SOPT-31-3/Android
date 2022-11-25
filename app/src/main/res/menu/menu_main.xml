@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/menu_home_selector"
+        android:title="@string/main_menu_home" />
+    <item
+        android:id="@+id/menu_wish"
+        android:icon="@drawable/menu_wish_selector"
+        android:title="@string/main_menu_wish" />
+    <item
+        android:id="@+id/menu_create_travle"
+        android:icon="@drawable/ic_create_travle"
+        android:title="@string/main_menu_travel" />
+    <item
+        android:id="@+id/menu_my_travel"
+        android:icon="@drawable/menu_trip_selector"
+        android:title="@string/main_menu_my_travel" />
+    <item
+        android:id="@+id/menu_mypage"
+        android:icon="@drawable/menu_mypage_selector"
+        android:title="@string/main_menu_mypage" />
+</menu>
