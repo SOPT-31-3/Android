@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 class ItemOffsetDecoration(private val context: Context,private val mItemOffset: Int) : RecyclerView.ItemDecoration() {
-    private val offset = mItemOffset.dpToPx(context)
+    private val offset = dpToPx(context,mItemOffset)
     override fun getItemOffsets(
         outRect: Rect, view: View, parent: RecyclerView,
         state: RecyclerView.State
@@ -38,9 +38,11 @@ class ItemOffsetDecoration(private val context: Context,private val mItemOffset:
     }
 
     // dp -> pixel 단위로 변경
-    private fun Int.dpToPx(context: Context): Int {
-        return context.resources.displayMetrics.density.let { density ->
-            (this * density).toInt()
-        }
+    private fun dpToPx(context: Context, dp: Int): Int {
+        return TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP,
+            dp.toFloat(),
+            context.resources.displayMetrics
+        ).toInt()
     }
 }
