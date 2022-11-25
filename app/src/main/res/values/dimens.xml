@@ -5,4 +5,5 @@
     <dimen name="title_back_margin_top">53dp</dimen>
     <dimen name="title_title_margin_start">28dp</dimen>
     <dimen name="title_title_margin_top">85dp</dimen>
+    <dimen name="choice_city_recycler_gap">8dp</dimen>
 </resources>
