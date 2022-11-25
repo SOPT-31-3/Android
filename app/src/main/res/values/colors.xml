@@ -8,16 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-<<<<<<< HEAD
-    <color name="grey_dark_4A4A4A">#4A4A4A</color>
-    <color name="grey_A5A5A5">#A5A5A5</color>
-    <color name="grey_light_DCDCDC">#DCDCDC</color>
-=======
     <color name="grey_dark">#4A4A4A</color>
     <color name="grey">#A5A5A5</color>
     <color name="grey_light">#DCDCDC</color>
     <color name="grey_D9D9D9">#D9D9D9</color>
->>>>>>> parent of 078dec7 (Revert "[style] 도시 검색 color 및 TextAppearance 추가")
+
     <color name="mint_61CBD1">#61CBD1</color>
     <color name="white_EEF6FE">#EEF6FE</color>
     <color name="mint_7EC1AE">#7EC1AE</color>
