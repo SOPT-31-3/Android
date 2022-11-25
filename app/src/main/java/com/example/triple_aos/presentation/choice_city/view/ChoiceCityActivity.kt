@@ -19,7 +19,7 @@ class ChoiceCityActivity :
         binding.lifecycleOwner = this
 
         binding.choiceGridRv.layoutManager = GridLayoutManager(this, 3)
-        binding.choiceGridRv.addItemDecoration(ItemOffsetDecoration(this,8))
+        binding.choiceGridRv.addItemDecoration( ItemOffsetDecoration(this,8))
         initAdapter()
     }
 
