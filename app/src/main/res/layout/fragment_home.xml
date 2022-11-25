@@ -96,6 +96,7 @@
                 app:layout_constraintTop_toBottomOf="@id/iv_airplane" />
 
             <TextView
+                android:id="@+id/tv_popular_whole"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="19dp"
@@ -106,7 +107,79 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tv_home_real_time_popular" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_recent_popular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_real_time_popular"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_list_home_popular" />
 
+            <TextView
+                android:id="@+id/tv_recent_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:fontFamily="@font/notosans_bold"
+                android:text="@string/home_title_show_recent"
+                app:layout_constraintStart_toStartOf="@id/tv_home_real_time_popular"
+                app:layout_constraintTop_toBottomOf="@id/rv_recent_popular" />
+
+            <TextView
+                android:id="@+id/tv_recent_whole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="19dp"
+                android:fontFamily="@font/notosans_medium"
+                android:text="@string/home_show_whole"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_recent_show"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_recent_show" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_recent_shoe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tv_recent_show"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_list_home_recent" />
+
+            <TextView
+                android:id="@+id/tv_magagine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:fontFamily="@font/notosans_bold"
+                android:text="@string/home_chip_travle_magagine"
+                app:layout_constraintStart_toStartOf="@id/tv_home_real_time_popular"
+                app:layout_constraintTop_toBottomOf="@id/rv_recent_shoe" />
+
+            <TextView
+                android:id="@+id/tv_magagine_whole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="19dp"
+                android:fontFamily="@font/notosans_medium"
+                android:text="@string/home_show_whole"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_magagine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_magagine" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_magagine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tv_magagine_whole"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_list_home_magagine" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
