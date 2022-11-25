@@ -20,4 +20,23 @@
 
 
     </style>
+
+    <!-- Style -->
+    <style name="Style.ImageButton.Basic" parent="">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="tab_text" parent="">
+        <item name="android:fontFamily">@font/notosans_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontStyle">normal</item>
+    </style>
+
+    <style name="Style.Material.Button.Basic" parent="">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
 </resources>
