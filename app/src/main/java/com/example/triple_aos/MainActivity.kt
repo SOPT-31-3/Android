@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.triple_aos.databinding.ActivityMainBinding
+import com.example.triple_aos.presentation.home.HomeFragment
 import com.example.triple_aos.presentation.mytrip.view.MyTripFragment
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             // TODO: 이거 자기꺼에 맞는걸로 바꿔 주세용~
             changeFragment(
                 when (it.itemId) {
-//                    R.id.menu_home -> HomeFragment()
+                    R.id.menu_home -> HomeFragment()
 //                    R.id.menu_wish -> HomeFragment()
 //                    R.id.menu_create_travle -> HomeFragment()
                     R.id.menu_my_travel -> MyTripFragment()
