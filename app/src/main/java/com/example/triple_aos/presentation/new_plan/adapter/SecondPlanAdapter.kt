@@ -1,4 +1,4 @@
-package com.example.triple_aos.presentation.new_plan
+package com.example.triple_aos.presentation.new_plan.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,9 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.triple_aos.data.dto.NewPlanData
 import com.example.triple_aos.databinding.LayoutAddPlanBinding
 
-class ThirdPlanAdapter : RecyclerView.Adapter<ThirdPlanAdapter.NewPlanViewHolder>() {
+class SecondPlanAdapter : RecyclerView.Adapter<SecondPlanAdapter.NewPlanViewHolder>() {
     private var entire_plans: List<NewPlanData>? = emptyList()
-
     fun setItems(items: List<NewPlanData>) {
         this.entire_plans = items
         notifyDataSetChanged()

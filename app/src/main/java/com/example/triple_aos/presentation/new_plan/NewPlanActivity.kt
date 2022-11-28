@@ -14,7 +14,7 @@ class NewPlanActivity : BindingActivity<ActivityNewPlanBinding>(R.layout.activit
     private val flightFragment = FlightFragment()
     private val foodFragment = FoodFragment()
     private val tourFragment = TourFragment()
-    private val accommodationFragment = AccomodationFragment()
+    private val accommodationFragment = AccommodationFragment()
 
     val fragments = arrayListOf<Fragment>(
         tabPlanFragment,

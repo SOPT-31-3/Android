@@ -6,6 +6,9 @@ import com.example.triple_aos.R
 import com.example.triple_aos.base.BindingFragment
 import com.example.triple_aos.data.dto.NewPlanData
 import com.example.triple_aos.databinding.FragmentPlanBinding
+import com.example.triple_aos.presentation.new_plan.adapter.FirstPlanAdapter
+import com.example.triple_aos.presentation.new_plan.adapter.SecondPlanAdapter
+import com.example.triple_aos.presentation.new_plan.adapter.ThirdPlanAdapter
 
 class PlanFragment : BindingFragment<FragmentPlanBinding>(R.layout.fragment_plan) {
 
