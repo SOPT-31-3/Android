@@ -10,7 +10,7 @@ import com.example.triple_aos.presentation.choice_city.adapter.ChoiceCityAdapter
 import com.example.triple_aos.presentation.choice_city.data.CityAdd
 import com.example.triple_aos.presentation.choice_city.data.CityInfo
 import com.example.triple_aos.presentation.choice_city.viewmodel.ChoiceCityViewModel
-import com.example.triple_aos.util.ItemOffsetDecoration
+import com.example.triple_aos.util.GridItemOffsetDecoration
 
 class ChoiceCityActivity :
     BindingActivity<ActivityChoiceCityBinding>(R.layout.activity_choice_city) {
@@ -50,7 +50,7 @@ class ChoiceCityActivity :
 
     private fun initAdapter() {
         binding.choiceGridRv.layoutManager = GridLayoutManager(this, 3)
-        binding.choiceGridRv.addItemDecoration(ItemOffsetDecoration(this,8))
+        binding.choiceGridRv.addItemDecoration(GridItemOffsetDecoration(this,8))
         binding.choiceGridRv.adapter = adapter
     }
 }

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="12dp">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white">
@@ -16,7 +22,7 @@
     app:layout_constraintBottom_toBottomOf="parent"
     android:layout_marginTop="18dp"
     android:layout_marginBottom="12dp"
-    android:layout_marginStart="20dp">
+    android:layout_marginStart="22dp">
     <ImageView
         android:id="@+id/my_trip_item_img_iv1"
         android:layout_width="54dp"
@@ -46,6 +52,7 @@
         android:text="2023.02.07 (수) - 2023.02.09 (금)"
         android:textAppearance="@style/MyTripCityPeriodAppearance"/>
     <ImageView
+        android:id="@+id/my_trip_item_folder_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,5 +61,13 @@
         android:layout_marginEnd="22dp"
         android:layout_marginTop="27dp"
         android:layout_marginBottom="27dp"
-        android:src = "@drawable/ic_folder_close"/>
+        android:src = "@drawable/ic_folder_open"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_trip_item_day_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:listitem="@layout/my_trip_day_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+</LinearLayout>

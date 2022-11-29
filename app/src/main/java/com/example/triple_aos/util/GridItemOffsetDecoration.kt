@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
-class ItemOffsetDecoration(private val context: Context,private val mItemOffset: Int) : RecyclerView.ItemDecoration() {
+class GridItemOffsetDecoration(private val context: Context, private val mItemOffset: Int) : RecyclerView.ItemDecoration() {
 
     private val offset = mItemOffset.dpToPx(context)
 
