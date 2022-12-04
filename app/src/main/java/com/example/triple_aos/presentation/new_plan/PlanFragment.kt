@@ -1,14 +1,18 @@
 package com.example.triple_aos.presentation.new_plan
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import androidx.fragment.app.viewModels
 import com.example.triple_aos.R
 import com.example.triple_aos.base.BindingFragment
+import com.example.triple_aos.data.dto.NetworkState
 import com.example.triple_aos.data.dto.NewPlanData
 import com.example.triple_aos.databinding.FragmentPlanBinding
 import com.example.triple_aos.presentation.new_plan.adapter.FirstPlanAdapter
 import com.example.triple_aos.presentation.new_plan.adapter.SecondPlanAdapter
 import com.example.triple_aos.presentation.new_plan.adapter.ThirdPlanAdapter
+import com.google.android.material.snackbar.Snackbar
 
 class PlanFragment : BindingFragment<FragmentPlanBinding>(R.layout.fragment_plan) {
 
@@ -19,6 +23,9 @@ class PlanFragment : BindingFragment<FragmentPlanBinding>(R.layout.fragment_plan
     private var firstPlanList: MutableList<NewPlanData> = mutableListOf()
     private var secondPlanList: MutableList<NewPlanData> = mutableListOf()
     private var thirdPlanList: MutableList<NewPlanData> = mutableListOf()
+
+    private val viewModel by viewModels<PlanViewModel>()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initListener()
@@ -29,6 +36,7 @@ class PlanFragment : BindingFragment<FragmentPlanBinding>(R.layout.fragment_plan
         binding.btnPlanPlus.setOnClickListener {
             binding.layoutPlanInsert.visibility = View.GONE
             binding.layoutPlans.visibility = View.VISIBLE
+            (activity as NewPlanActivity).changeIntroText()
         }
         binding.btnFirstPlan.setOnClickListener {
             if (binding.dvFirst.visibility == View.INVISIBLE) {//펼쳐진 상태
@@ -70,18 +78,68 @@ class PlanFragment : BindingFragment<FragmentPlanBinding>(R.layout.fragment_plan
             }
         }
         binding.btnAddFirstPlan.setOnClickListener {
-            firstPlanList.add(NewPlanData())
+            firstPlanList.add(NewPlanData("", 1, ""))
             firstAdapter.setItems(firstPlanList)
         }
         binding.btnAddSecondPlan.setOnClickListener {
-            secondPlanList.add(NewPlanData())
+            secondPlanList.add(NewPlanData("", 2, ""))
             secondAdapter.setItems(secondPlanList)
         }
         binding.btnAddThirdPlan.setOnClickListener {
-            thirdPlanList.add(NewPlanData())
+            thirdPlanList.add(NewPlanData("", 3, ""))
             thirdAdapter.setItems(thirdPlanList)
         }
+        binding.btnSavePlan.setOnClickListener {
+            updateList()
+            var totalList: List<NewPlanData> = firstPlanList + secondPlanList + thirdPlanList
 
+            Log.i("w_list", totalList.toString())
+            if (isEmpty(totalList)) {
+                makeSnackbar(getString(R.string.plan_missing_error))
+            } else {
+                viewModel.savePlan(totalList)
+            }
+        }
+        viewModel.saveResult.observe(requireActivity()) {
+            when (it) {
+                is NetworkState.Success -> {
+                    /////TODO 서버 저장 성공했을 때 처리 추가하기
+                    makeSnackbar("일정 저장 완료!")
+                }
+                is NetworkState.Failure -> makeSnackbar(getString(R.string.unexpected_error))
+                is NetworkState.Error -> makeSnackbar(getString(R.string.network_error))
+            }
+        }
+
+    }
+
+    private fun isEmpty(totalList: List<NewPlanData>): Boolean {
+        var isNotEmpty = true//하나라도 비어있으면 false
+        if (totalList.isEmpty()) {
+            isNotEmpty = false
+        } else {
+            for (list in totalList) {
+                isNotEmpty = isNotEmpty && list.content.isNotEmpty() && list.time.isNotEmpty()
+            }
+        }
+
+        return !isNotEmpty
+    }
+
+    private fun updateList() {
+        firstPlanList = firstAdapter.getItems().toMutableList()
+        secondPlanList = secondAdapter.getItems().toMutableList()
+        thirdPlanList = thirdAdapter.getItems().toMutableList()
+    }
+
+    private fun makeSnackbar(message: String) {
+        Snackbar.make(
+            binding.root,
+            message,
+            Snackbar.LENGTH_SHORT
+        ).apply {
+            anchorView = binding.btnSavePlan
+        }.show()
     }
 
     private fun initRecyclerView() {
