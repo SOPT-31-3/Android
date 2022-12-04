@@ -5,7 +5,7 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.triple_aos.data.dto.NewPlanData
+import com.example.triple_aos.presentation.new_plan.data.NewPlanData
 import com.example.triple_aos.databinding.LayoutAddPlanBinding
 
 class FirstPlanAdapter : RecyclerView.Adapter<FirstPlanAdapter.NewPlanViewHolder>() {

@@ -1,4 +1,4 @@
-package com.example.triple_aos.presentation.new_plan
+package com.example.triple_aos.presentation.new_plan.view
 
 import android.os.Bundle
 import android.util.Log
@@ -6,9 +6,10 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import com.example.triple_aos.R
 import com.example.triple_aos.base.BindingFragment
-import com.example.triple_aos.data.dto.NetworkState
-import com.example.triple_aos.data.dto.NewPlanData
+import com.example.triple_aos.presentation.new_plan.data.NetworkState
+import com.example.triple_aos.presentation.new_plan.data.NewPlanData
 import com.example.triple_aos.databinding.FragmentPlanBinding
+import com.example.triple_aos.presentation.new_plan.viewmodel.PlanViewModel
 import com.example.triple_aos.presentation.new_plan.adapter.FirstPlanAdapter
 import com.example.triple_aos.presentation.new_plan.adapter.SecondPlanAdapter
 import com.example.triple_aos.presentation.new_plan.adapter.ThirdPlanAdapter

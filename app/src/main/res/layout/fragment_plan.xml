@@ -7,7 +7,7 @@
         android:id="@+id/layout_plan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".presentation.new_plan.PlanFragment">
+        tools:context=".presentation.new_plan.view.PlanFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_plan_insert"

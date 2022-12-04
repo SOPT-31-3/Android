@@ -1,10 +1,10 @@
-package com.example.triple_aos.presentation.new_plan
+package com.example.triple_aos.presentation.new_plan.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.triple_aos.data.dto.NetworkState
-import com.example.triple_aos.data.dto.NewPlanData
+import com.example.triple_aos.presentation.new_plan.data.NetworkState
+import com.example.triple_aos.presentation.new_plan.data.NewPlanData
 import com.example.triple_aos.data.dto.request.RequestPlanList
 import com.example.triple_aos.data.dto.response.ResponseSavePlan
 import com.example.triple_aos.data.service.ServicePool

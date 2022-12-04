@@ -1,4 +1,4 @@
-package com.example.triple_aos.data.dto
+package com.example.triple_aos.presentation.new_plan.data
 
 import kotlinx.serialization.Serializable
 
