@@ -23,7 +23,7 @@ class NewPlanActivity : BindingActivity<ActivityNewPlanBinding>(R.layout.activit
         foodFragment,
         tourFragment
     )
-    val tabAdapter = object : FragmentStateAdapter(this) {
+    private val tabAdapter = object : FragmentStateAdapter(this) {
         override fun getItemCount(): Int {
             return fragments.size
         }
@@ -49,4 +49,7 @@ class NewPlanActivity : BindingActivity<ActivityNewPlanBinding>(R.layout.activit
         })
     }
 
+    fun changeIntroText() {
+        binding.tvTabIntro.text = getString(R.string.tab_intro2)
+    }
 }

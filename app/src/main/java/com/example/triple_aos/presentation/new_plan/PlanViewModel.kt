@@ -3,6 +3,7 @@ package com.example.triple_aos.presentation.new_plan
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.triple_aos.data.dto.NetworkState
 import com.example.triple_aos.data.dto.NewPlanData
 import com.example.triple_aos.data.dto.request.RequestPlanList
 import com.example.triple_aos.data.dto.response.ResponseSavePlan
@@ -16,9 +17,10 @@ class PlanViewModel : ViewModel() {
     val savePlanResult: LiveData<ResponseSavePlan>
         get() = _savePlanResult
 
-    private val _saveResult = MutableLiveData<String>()
-    val saveResult: LiveData<String>
+    private val _saveResult = MutableLiveData<NetworkState>()
+    val saveResult: LiveData<NetworkState>
         get() = _saveResult
+
     private val saveService = ServicePool.tripleService
 
     fun savePlan(planList: List<NewPlanData>) {
@@ -29,11 +31,15 @@ class PlanViewModel : ViewModel() {
                 call: Call<ResponseSavePlan>,
                 response: Response<ResponseSavePlan>
             ) {
-                _saveResult.value = response.body()?.message
+                if (response.isSuccessful) {
+                    _saveResult.value = NetworkState.Success
+                } else {
+                    _saveResult.value = NetworkState.Failure
+                }
             }
 
             override fun onFailure(call: Call<ResponseSavePlan>, t: Throwable) {
-                _saveResult.value = "네트워크 오류가 발생했습니다."
+                _saveResult.value = NetworkState.Error(t)
             }
 
         })

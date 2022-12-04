@@ -1,3 +1,10 @@
 package com.example.triple_aos.data.dto
 
-data class NewPlanData(val time: String = "", val content: String = "")
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class NewPlanData(
+    var content: String,
+    var dayId: Int,
+    var time: String
+)

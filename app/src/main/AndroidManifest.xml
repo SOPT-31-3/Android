@@ -23,6 +23,11 @@
         </activity>
         <activity
             android:name=".MainActivity"
+            android:exported="false">
+
+        </activity>
+        <activity android:name=".presentation.new_plan.NewPlanActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
