@@ -12,6 +12,7 @@
 
 
     <string name="tab_intro">파리 여행,\n언제 떠나세요?</string>
+    <string name="tab_intro2">파리에서의\n여행 일정을 완성하세요.</string>
     <string name="tab_plan">전체일정</string>
     <string name="tab_flight">항공</string>
     <string name="tab_accommodation">숙소</string>
@@ -26,6 +27,10 @@
     <string name="second_date">02.05(일)</string>
     <string name="third_date">02.06(월)</string>
     <string name="save_plan">전체 저장</string>
+
+    <string name="plan_missing_error">비어 있는 일정이 있는지 확인해주세요!</string>
+    <string name="network_error">네트워크가 불안정합니다.</string>
+    <string name="unexpected_error">예상치 못한 오류가 발생했습니다.</string>
 
     <string name="default_time">00:00</string>
     <string name="default_plan">내용을 입력하세요.</string>
